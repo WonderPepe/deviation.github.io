@@ -9,18 +9,44 @@
 <body>
 
     <header>
-        <h1>Create deviation by selecting criticality and type of the deviation. Select responsible person to inform about the deviation</h1>
+        <h1>Create deviation</h1>
     </header>
 
     <form id="issueForm">
+        <div class="row">
+            <div class="half-width">
+                <label for="takt">Takt:</label>
+                <select id="takt" name="takt">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                    <option value="option4">Option 4</option>
+                    <option value="option5">Option 5</option>
+                    <option value="option6">Option 6</option>
+                </select>
+            </div>
+
+            <div class="half-width">
+                <label for="activity">Activity:</label>
+                <select id="activity" name="activity">
+                    <option value="planning">Planning</option>
+                    <option value="execution">Execution</option>
+                    <option value="monitoring">Monitoring</option>
+                    <option value="closure">Closure</option>
+                    <option value="review">Review</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+
         <div class="button-group">
             <label>Criticality:</label>
             <div>
-                <button type="button" class="criticality-btn" value="high">High</button>
-                <button type="button" class="criticality-btn" value="medium">Medium</button>
-                <button type="button" class="criticality-btn" value="low">Low</button>
-                <button type="button" class="criticality-btn" value="info">Informational</button>
-                <button type="button" class="criticality-btn" value="urgent">Urgent</button>
+                <button type="button" class="criticality-btn high" value="high">High</button>
+                <button type="button" class="criticality-btn medium" value="medium">Medium</button>
+                <button type="button" class="criticality-btn low" value="low">Low</button>
+                <button type="button" class="criticality-btn info" value="info">Informational</button>
+                <button type="button" class="criticality-btn urgent" value="urgent">Urgent</button>
             </div>
         </div>
 
@@ -31,17 +57,44 @@
             <option value="enhancement">Enhancement</option>
         </select>
 
+        <!-- Info icon for the 'Type' dropdown -->
+        <div class="info-icon" title="Select Type">
+            <span>ℹ️</span>
+        </div>
+
+        <label for="responsiblePerson">Responsible Person:</label>
+        <select id="responsiblePerson" name="responsiblePerson">
+            <option value="person1">Person 1</option>
+            <option value="person2">Person 2</option>
+            <option value="person3">Person 3</option>
+            <!-- Add more options as needed -->
+        </select>
+
         <label for="description">Description:</label>
         <textarea id="description" name="description" rows="4" cols="50"></textarea>
 
-        <label for="material">Material:</label>
-        <select id="material" name="material">
-            <option value="metal">Metal</option>
-            <option value="plastic">Plastic</option>
-            <option value="wood">Wood</option>
-            <option value="glass">Glass</option>
-            <option value="other">Other</option>
-        </select>
+        <div class="row">
+            <div class="third-width">
+                <label for="material">Material:</label>
+                <select id="material" name="material">
+                    <option value="metal">Metal</option>
+                    <option value="plastic">Plastic</option>
+                    <option value="wood">Wood</option>
+                    <option value="glass">Glass</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="third-width">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+            </div>
+
+            <div class="third-width">
+                <label for="dueDate">Due Date:</label>
+                <input type="date" id="dueDate" name="dueDate">
+            </div>
+        </div>
 
         <button type="button" id="saveButton">Save</button>
     </form>

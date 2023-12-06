@@ -5,12 +5,30 @@ body {
     margin: 20px;
 }
 
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 600px; /* Set max-width for the header text */
+    margin: 0 auto;
+}
+
 form {
     max-width: 400px;
     margin: 0 auto;
 }
 
-label, select, textarea {
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between;
+    margin-bottom: 10px; /* Added margin bottom for spacing */
+}
+
+.half-width {
+    width: calc(50% - 5px); /* Adjusted width for half of the container with a 5px margin */
+}
+
+label, select, input, textarea {
     display: block;
     margin-bottom: 10px;
 }
@@ -24,7 +42,45 @@ button {
     cursor: pointer;
 }
 
-header {
-    text-align: center;
-    margin-bottom: 20px;
+/* Add this CSS code for styling the info icon */
+.info-icon {
+    display: inline-block;
+    margin-left: 5px; /* Adjust margin as needed */
+    cursor: help;
+}
+
+.info-icon span {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.info-icon:hover span {
+    display: block;
+}
+
+
+/* Colors for criticality buttons */
+button.criticality-btn.high {
+    background-color: #FF4136; /* Red */
+}
+
+button.criticality-btn.medium {
+    background-color: #FF851B; /* Orange */
+}
+
+button.criticality-btn.low {
+    background-color: #FFDC00; /* Yellow */
+}
+
+button.criticality-btn.info {
+    background-color: #7FDBFF; /* Light Blue */
+}
+
+button.criticality-btn.urgent {
+    background-color: #B10DC9; /* Purple */
 }
