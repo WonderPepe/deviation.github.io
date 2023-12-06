@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Tracker</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Create deviation by selecting criticality and type of the deviation. Select responsible person to inform about the deviation</h1>
+    </header>
+
+    <form id="issueForm">
+        <div class="button-group">
+            <label>Criticality:</label>
+            <div>
+                <button type="button" class="criticality-btn" value="high">High</button>
+                <button type="button" class="criticality-btn" value="medium">Medium</button>
+                <button type="button" class="criticality-btn" value="low">Low</button>
+                <button type="button" class="criticality-btn" value="info">Informational</button>
+                <button type="button" class="criticality-btn" value="urgent">Urgent</button>
+            </div>
+        </div>
+
+        <label for="type">Type:</label>
+        <select id="type" name="type">
+            <option value="bug">Bug</option>
+            <option value="feature">Feature</option>
+            <option value="enhancement">Enhancement</option>
+        </select>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" cols="50"></textarea>
+
+        <label for="material">Material:</label>
+        <select id="material" name="material">
+            <option value="metal">Metal</option>
+            <option value="plastic">Plastic</option>
+            <option value="wood">Wood</option>
+            <option value="glass">Glass</option>
+            <option value="other">Other</option>
+        </select>
+
+        <button type="button" id="saveButton">Save</button>
+    </form>
+
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
